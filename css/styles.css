@@ -1,23 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotman', sans-serif; 
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
+    background: radial-gradient(circle at top, #1a103c, #070510);
+    background-attachment: fixed; 
+    color: #e2e8f0;
+    line-height: 1.6;
 }
 
-header {
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar {
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    text-align: center;
+}
+.hero-espacio h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: #e9eaf5;
+    text-shadow: 0 0 10px #000, 0 0 20px #50598b;
     margin-bottom: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+
+.hero-espacio-equipos h2, 
+.hero-espacio-eventos h2, 
+.hero-espacio-registro h2,
+#inicio h2 {
+    font-weight: bold;
+    font-size: 28px;
+    color: #e9eaf5;
+    text-shadow: 0 0 10px #000, 0 0 20px #191f42;
+    margin-bottom: 20px;
 }
 
-nav li {
-    display: inline;
-    margin-right: 15px;
+.hero-espacio-registro h2 {
+    text-align: center;
+}
+
+
+.hero-espacio .texto-principal {
+    font-size: 24px; 
+    text-align: left;
+    margin-bottom: 25px;
+    color: #e9eaf5;
+    text-shadow: 0 0 10px #000;
+    max-width: 700px;
+}
+
+
+.hero-espacio .texto-principal2 {
+    font-size: 16px; 
+    text-align: left;
+    margin-bottom: 25px;
+    color: #e9eaf5;
+    text-shadow: 0 0 10px #000;
+    max-width: 700px;
+}
+
+.hero-espacio .texto-secundario {
+    font-size: 18px; 
+    text-align: left;
+    margin-bottom: 25px;
+    color: #e9eaf5;
+    text-shadow: 0 0 10px #000;
+    max-width: 700px;
+}
+
+.hero-espacio {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 60%, #272952 100%), url("../images/principal.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+.equipos, .eventos {
+    box-shadow: 0 -20px 40px rgba(0,0,0,0.6);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 60%, #272952 100%), url("../images/estrellas.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.registro {
+    box-shadow: 0 -20px 40px rgba(0,0,0,0.6);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 60%, #272952 100%), url("../images/inicio.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card {
+    background-color: rgba(17, 12, 34, 0.95) !important; 
+    border: 1px solid #3d2b6e !important; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(109, 40, 217, 0.3);
+    color: #e2e8f0 !important; 
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #cbd5e1;
+}
+
+
+.btn-polaris {
+    background: linear-gradient(45deg, #1a103c, #4c1d95); 
+    color: white !important;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-polaris:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(109, 40, 217, 0.6);
+    text-decoration: none;
 }
 
 footer {
-    margin-top: 40px;
-    font-size: 14px;
+    box-shadow: 0 -20px 40px rgba(0,0,0,0.6);
+    font-size: 16px;
+    background: radial-gradient(circle at top, #1a103c, #070510);
+    padding: 60px 0 30px 0;
+}
+
+/* seccion del registro */
+
+body {
+  
+    background: radial-gradient(circle at top, #1a103c, #070510);
+    background-attachment: fixed; 
+    color: #e2e8f0;
+    padding-top: 45px; 
+}
+
+
+.navbar.bg-dark {
+    background-color: #0b071a !important;
+    border-bottom: 1px solid #3d2b6e !important;
+}
+
+
+.polaris-card {
+    background-color: rgba(17, 12, 34, 0.95) !important; 
+    border: 1px solid #3d2b6e !important; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(109, 40, 217, 0.3);
+    color: #e2e8f0 !important; 
+}
+
+
+.polaris-card h2, 
+.polaris-card p, 
+.polaris-card label, 
+.form-check-label {
+    color: #e2e8f0 !important;
+    font-weight: bold;
+}
+
+
+.form-control, .form-select {
+    background-color: #1e153a !important; 
+    border: 1px solid #4a3680 !important;
+    color: #f3f4f6 !important;
+}
+
+
+.form-control:focus, .form-select:focus {
+    background-color: #251a47 !important;
+    color: #ffffff !important;
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.3) !important;
+}
+
+
+.form-control::placeholder {
+    color: #8b80b0 !important;
+}
+
+.texto-brillante {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 0 30px rgba(76, 29, 149, 0.6);
+    line-height: 1.2;
+}
+
+
+.tracking-wide {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(139, 92, 246, 0.5);
+}
+
+
+.bg-polaris {
+    background: linear-gradient(45deg, #1a103c, #4c1d95);
+}
+
+.glass-card {
+    background: rgba(17, 12, 34, 0.3); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(76, 29, 149, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.custom-file-upload {
+  display: block;
+  width: 100%;
+  padding: 10px 15px; 
+  background-color: #160B24; 
+  border: 1px solid #3B1B68; 
+  border-radius: 6px; 
+  color: #7D6B91; 
+  font-family: inherit;
+  font-size: 14px; 
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+
+.custom-file-upload:hover {
+  border-color: #6A35B3; 
+  color: #FFFFFF;
+}
+
+#habilidades {
+    display: flex;
+    gap: 40px; 
+}
+
+#habilidades .columna {
+    flex: 1;
+}
+
+#rol {
+    display: flex;
+    gap: 40px;
+}
+
+#rol .columna {
+    flex: 1;
 }
