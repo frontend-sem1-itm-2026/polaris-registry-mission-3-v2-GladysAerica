@@ -36,14 +36,12 @@
         <div class="row justify-content-center">
             
             <div class="col-md-8 col-lg-6">
-
                 
 
                 <div class="card polaris-card p-4 mt-4">
-                    <form class="form">
+                    <form class="form" name="formulario_registro" id="formulario_registro">
 
                         
-
                         <div class="text-center mb-4">
                             <h2 class="fw-bold text-dark">Registro de Miembros</h2>
                             <p class="text-muted">Únete a la comunidad de exploración espacial</p>
@@ -63,38 +61,43 @@
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control" id="name" placeholder="Tu nombre completo" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre completo" maxlength="100" required pattern="^[A-Za-z\s]+$" title="Solo letras y espacios">
                         </div>
 
                         <div class="mb-3">
-                            <label for="email" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="tucorreo@gmail.com" required>
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" maxlength="100" required >
                         </div>
 
                         <div class="mb-3">
-                            <label for="tel" class="form-label">Número de teléfono</label>
-                            <input type="tel" class="form-control" id="tel" placeholder="Tu número de teléfono" required>
+                            <label for="telefono" class="form-label">Número de teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="10 digitos" required title="Solo 10 digitos númerico">
                         </div>
 
                         <div class="mb-3">
                             <label for="fecha_nac" class="form-label">Fecha de nacimiento</label>
-                            <input type="date" class="form-control" id="fecha_nac" required>
+                            <input type="date" class="form-control" id="fecha_nac" name="fecha_nac" required title="Rellena este campo">
                         </div>
 
                         <br><h4>Datos Académicos</h4><br>
 
                         <div class="mb-3">
                             <label for="institucion" class="form-label">Institución</label>
-                            <input type="text" class="form-control" id="institucion" placeholder="Tu institución" required>
+                            <input type="text" class="form-control" id="institucion" name="institucion" placeholder="Tu institución" maxlength="100" required title="Rellena este campo">
                         </div>
 
                         <div class="mb-3">
                             <label for="carrera" class="form-label">Carrera</label>
-                            <input type="text" class="form-control" id="carrera" placeholder="Tu carrera" required>
+                            <input type="text" class="form-control" id="carrera" name="carrera" placeholder="Tu carrera" maxlength="100" required title="Rellena este campo">
                         </div>
 
                         <div class="mb-3">
-                            <label for="semestre" class="form-label">Semestre actual</label>
+                            <label for="semestre" class="form-label">Ingrese su semestre actual</label>
+                            <input type="number" class="form-control"  name="semestre" id="semestre" min="1" max="12" placeholder="1 al 12" required title="Rellena este campo">
+                        </div>
+
+                        <!--<div class="mb-3">
+                            <label for="semestre" class="form-label">Semestre actual tiene que tener rango de 1 al 12</label>
                             <select class="form-select" id="semestre" required>
                                 <option value="" selected disabled>Selecciona tu semestre</option>
                                 <option>1° Semestre</option>
@@ -108,30 +111,42 @@
                                 <option>9° Semestre</option>
                                 <option>10° Semestre</option>
                             </select>
-                        </div> <br>
+                        </div> <br>-->
 
                         <h4>Perfil Polaris</h4>
 
-                        <!-- Pendiente -->
+                        
                         <div class="mb-3">
                             <label for="generacion" class="form-label">Generación Polaris</label>
-                            <input type="number" class="form-control" id="generacion" placeholder="Tu generación" required>
+                            <input type="number" class="form-control" id="generacion" name="generacion" min="2000" max="2026" placeholder="Generación" required title="Rellena este campo">
                         </div>
 
-                        <!-- Pendiente -->
+                        
                         <div class="mb-3">
                             <label for="año_ingreso" class="form-label">Año de ingreso</label>
-                            <input type="number" class="form-control" id="año_ingreso" placeholder="Año de ingreso" value="2026" required>
+                            <input type="number" class="form-control" id="año_ingreso" name="año_ingreso" min="2000" max="2026" placeholder="Año de ingreso" value="2026" required title="Rellena este campo">
                         </div>
 
                         <div class="mb-3">
                             <label for="proyect" class="form-label">Proyecto de interés</label>
-                            <select class="form-select" id="proyect" required>
+                            <select class="form-select" id="proyect" name="proyect" required title="Rellena este campo">
                                 <option value="" selected disabled>Seleccione una opción</option>
                                 <option>PolariX</option>
                                 <option>Mentes en Órbita</option>
                                 <option>Hydronautas</option>
                                 <option>Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="rol_polaris" class="form-label">Rol dentro de POLARIS</label>
+                            <select class="form-select" id="rol_polaris" name="rol_polaris" required title="Rellena este campo">
+                                <option value="" selected disabled>Seleccione una opción</option>
+                                <option>Líder de equipo</option>
+                                <option>Participante</option>
+                                <option>Mentor</option>
+                                <option>Coordinador</option>
+                                <option>Colaborador</option>
                             </select>
                         </div> <br>
 
@@ -141,7 +156,7 @@
 
                             <div class="columna">
                                 <input id="cprogramacion" type="checkbox" name="programacion" value="">
-                                <label for="cprogramacion">Programación</label><br>
+                                <label for="cprogramacion" >Programación</label><br>
                                 
                                 <input id="celectronica" type="checkbox" name="electronica" value="">
                                 <label for="celectronica">Electrónica</label><br>
@@ -163,60 +178,58 @@
                         <h4>Seguimiento</h4>
 
                         <div class="mb-3">
-                            <label for="actual" class="form-label">Lugar de trabajo o institución actual</label>
-                            <input type="text" class="form-control" id="actual" placeholder="Tu institución o trabajo actual" required>
+                            <label for="actual" class="form-label">Lugar de trabajo o institución actual (opcional)</label>
+                            <input type="text" class="form-control" id="actual" name="actual" maxlength="80" placeholder="Tu institución o trabajo actual">
                         </div>
                         
-                        <label class="form-label">Rol</label>
-                        
+                        <label class="form-label">Rol actual (opcional)</label>
+
                         <div id="rol" class="mb-3 form-control">
-                            
-                            <!-- Columna izquierda -->
+
                              
                             <div class="columna">
-                                <input id="lider" type="radio" name="rol" value="lider">
+                                <input id="lider" type="radio" name="rol_actual" value="lider">
                                 <label for="lider">Líder de equipo</label><br>
 
-                                <input id="participante" type="radio" name="rol" value="participante">
+                                <input id="participante" type="radio" name="rol_actual" value="participante">
                                 <label for="participante">Participante</label><br>
 
-                                <input id="mentor" type="radio" name="rol" value="mentor">
+                                <input id="mentor" type="radio" name="rol_actual" value="mentor">
                                 <label for="mentor">Mentor</label><br>
                             </div>
+
                             
-                            <!-- Columna derecha -->
-                             <div class="columna">
-                                <input id="coordinador" type="radio" name="rol" value="coordinador">
+                            <div class="columna">
+                                <input id="coordinador" type="radio" name="rol_actual" value="coordinador">
                                 <label for="coordinador">Coordinador</label><br>
 
-                                <input id="colaborador" type="radio" name="rol" value="colaborador">
+                                <input id="colaborador" type="radio" name="rol_actual" value="colaborador">
                                 <label for="colaborador">Colaborador</label>
-                            </div>
-
+                            </div> 
                         </div>
 
                         <label for="rol-interes" class="form-label">Interés en seguir trabajando en Polaris</label>
-                        <div id="rol-interes" class="mb-3 form-control" required>
-                            <input id="si" type="radio" name="interes" value="">
+                        <div id="rol-interes" class="mb-3">
+                            <input id="si" type="radio" name="interes" value="si" required title="Rellena este campo">
                             <label for="si">Si</label><br>
-                            <input id="no" type="radio" name="interes" value="">
+                            <input id="no" type="radio" name="interes" value="no">
                             <label for="no">No</label><br>
                         </div> <br>
 
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="password" placeholder="Ingrese contraseña" required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Mínimo 8 caracteres" minlength="8" maxlength="50" required title="Al menos 8 caracteres">
                             </div>
                             
                             <div class="col-md-6 mb-3">
                                 <label for="password_confirm" class="form-label">Confirmar contraseña</label>
-                                <input type="password" class="form-control" id="password_confirm" placeholder="Confirme contraseña" required>
+                                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Repite tu contraseña" minlength="8" maxlength="50" required title="Al menos 8 caracteres">
                             </div>
                         </div>
 
                         <div class="form-check mb-4 mt-2">
-                            <input class="form-check-input" type="checkbox" id="terminos" required>
+                            <input class="form-check-input" type="checkbox" id="terminos" required title="Acepte las condiciones para continuar">
                             <label class="form-check-label text-muted" for="terminos">
                                 Al registrarte, aceptas formar parte de la comunidad POLARIS
                             </label>

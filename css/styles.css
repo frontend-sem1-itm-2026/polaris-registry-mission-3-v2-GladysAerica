@@ -273,3 +273,12 @@ body {
 #rol .columna {
     flex: 1;
 }
+.form-control:focus:invalid {
+    border: 2px solid #ff4d4d !important;
+    box-shadow: 0 0 5px #ff4d4d !important;
+}
+
+.form-control:focus:valid {
+    border: 2px solid #4dff88 !important;
+    box-shadow: 0 0 5px #4dff88 !important;
+}
