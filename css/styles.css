@@ -198,7 +198,6 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.3) !important;
 }
 
-
 .form-control::placeholder {
     color: #8b80b0 !important;
 }
@@ -281,4 +280,29 @@ body {
 .form-control:focus:valid {
     border: 2px solid #4dff88 !important;
     box-shadow: 0 0 5px #4dff88 !important;
+}
+/* lo que añadiii */
+/* campos con error */
+.form-control.is-invalid, 
+.form-select.is-invalid {
+    border-color: #dc3545 !important;
+    background-color: #1e153a !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+/* mensaje de error */
+.error-message-custom {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+    font-weight: bold;
+}
+
+/*  habilidades con error */
+#habilidades.error-habilidades {
+    border: 2px solid #dc3545 !important;
+    background-color: #1e153a !important;
+    border-radius: 4px !important;
+    padding: 10px !important;
 }
