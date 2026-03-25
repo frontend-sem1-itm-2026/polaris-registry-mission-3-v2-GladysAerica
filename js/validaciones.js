@@ -35,8 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (correo.length < 10) {
                 esValido = false;
                 errores.push('El correo debe tener al menos 10 caracteres.');
-                mostrarError('correo', 'Mínimo 10 caracteres');
-            } else {
+                mostrarError('correo', 'Ingrese el formato correcto');
+            } 
+            else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo)) {
+                esValido = false;
+                errores.push('El correo debe tener el formato correcto.');
+                mostrarError('correo', 'Ingrese el formato correcto : usuario@dominio.com');
+            }
+            else {
                 console.log('Correo válido');
             }
             
@@ -153,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (habilidadesSeleccionadas.length === 0) {
                 esValido = false;
                 errores.push('Debe seleccionar al menos una habilidad.');
+                mostrarError('habilidades', 'Selecciona al menos una habilidad');
                 const habilidadesContainer = document.getElementById('habilidades');
                 if (habilidadesContainer) {
                     habilidadesContainer.classList.add('error-habilidades');
@@ -282,3 +289,4 @@ function mostrarNotificacionExito() {
     const mensaje = 'Registro completo:\n\n Todos los datos son válidos\n Bienvenido a POLARIS\n\n Gracias por tu registro';
     alert(mensaje);
 }
+

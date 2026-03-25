@@ -61,17 +61,17 @@
 
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre completo" maxlength="100" pattern="^[A-Za-z\s]+$" title="Solo letras y espacios">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Ej. Pedro Gonzalez" maxlength="100" pattern="^[A-Za-z\s]+$" title="Solo letras y espacios">
                         </div>
 
                         <div class="mb-3">
                             <label for="correo" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" maxlength="100" >
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" minlength="10" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" >
                         </div>
 
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Número de teléfono</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}" title="Solo 10 digitos numéricos" placeholder="10 digitos">
+                            <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}" title="El teléfono debe tener 10 dígitos" placeholder="10 digitos">
                         </div>
 
                         <div class="mb-3">
@@ -88,7 +88,7 @@
 
                         <div class="mb-3">
                             <label for="carrera" class="form-label">Carrera</label>
-                            <input type="text" class="form-control" id="carrera" name="carrera" placeholder="Tu carrera" maxlength="100" title="Rellena este campo">
+                            <input type="text" class="form-control" id="carrera" name="carrera" placeholder="Ej. Contador Público" maxlength="100" title="Rellena este campo">
                         </div>
 
                         <div class="mb-3">
@@ -149,9 +149,9 @@
                             </select>
                         </div> 
 
-                         <br><h4>Habilidades y seguimiento</h4><br>
+                         <br><h4>Habilidades</h4><br>
                          
-                        <div id="habilidades" class="mb-3 form-control">
+                        <div id="habilidades" class="mb-3 form-control" title="Selecciona al menos una habilidad">
 
                             <div class="columna">
                                 <input id="cprogramacion" type="checkbox" name="programacion" value="">
@@ -173,6 +173,8 @@
                             </div>
 
                         </div>
+
+                        <br><h4>Seguimiento</h4><br>
 
                         <div class="mb-3">
                             <label for="motivacion" class="form-label">Motivación</label>
@@ -238,11 +240,11 @@
                         </div>
                         
                         <div class="d-grid gap-2">
-                            <button type="submit" class="btn-lg btn-polaris text-white ms-2 px-3">Registrarme</button>
+                            <button type="submit" class="btn-lg btn-polaris text-white ms-2 px-3">Registrarme en POLARIS</button>
                         </div>
 
                         <div class="text-center mt-4">
-                            <p class="text-muted">¿Ya tienes una cuenta? <a href="#" class="text-decoration-none text-primary">Inicia sesión</a></p>
+                            <p class="text-muted">¿Ya tienes una cuenta? <a href="#" class="btn-lg btn-polaris text-white ms-2 px-3">Inicia sesión</a></p>
                         </div>
                     </form>
                 </div>

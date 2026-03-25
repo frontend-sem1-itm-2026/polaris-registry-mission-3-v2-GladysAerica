@@ -122,6 +122,36 @@ body {
     font-size: 16px;
     color: #cbd5e1;
 }
+/* seccion de noticias */
+.card-bg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+}
+
+
+.card-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,0.2));
+    z-index: 1;
+}
+
+.card-bg .card-body {
+    position: relative;
+    z-index: 2;
+}
+
+.card-bg:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+
 
 
 .btn-polaris {
